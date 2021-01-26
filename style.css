@@ -14,19 +14,19 @@ section {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: -moz-linear-gradient(to bottom, #f1f4f9, #dff1ff);
+    background: -moz-linear-gradient(to bottom, #92b7f0, #2a94e6);
 }
 
 section .color {
     position: absolute;
-    filter: blur(150px);
+    filter: blur(170px);
 }
 
 section .color:nth-child(1) {
     top: -350px;
     width: 600px;
     height: 600px;
-    background: #a014d8;
+    background: #e21b1b;
 }
 
 section .color:nth-child(2) {
@@ -34,7 +34,7 @@ section .color:nth-child(2) {
     left: 100px;
     width: 500px;
     height: 500px;
-    background: #6dcbe2;
+    background: #086c85;
 }
 
 section .color:nth-child(3) {
@@ -42,7 +42,8 @@ section .color:nth-child(3) {
     right: 100px;
     width: 300px;
     height: 300px;
-    background: #f75f23;
+    background: #70029b;
+
 }
 
 .box {
@@ -55,18 +56,26 @@ section .color:nth-child(3) {
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-right: 1px solid rgba(255, 255, 255, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
-    animation: animate 10s linear infinite;
+    animation: animateY 10s linear infinite;
     animation-delay: calc(-1s * var(--i));
 }
 
-@keyframes animate {
+@keyframes animateY {
     0%, 100% {
         transform: translateY(-40px);
     }
     50% {
         transform: translateY(40px);
+    }
+}
+@keyframes animateX {
+    0%, 100% {
+        transform: translateX(-40px);
+    }
+    50% {
+        transform: translateX(40px);
     }
 }
 
@@ -78,7 +87,7 @@ section .color:nth-child(3) {
 }
 
 .box .square:nth-child(2) {
-    top: 150px;
+    top: 130px;
     left: -90px;
     width: 100px;
     height: 100px;
@@ -101,10 +110,11 @@ section .color:nth-child(3) {
 }
 
 .box .square:nth-child(5) {
-    bottom: -80px;
-    left: 100px;
+    bottom: 20px;
+    left: -40px;
     width: 50px;
     height: 50px;
+    animation: animateX 10s linear infinite;
 }
 
 .container {
